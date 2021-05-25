@@ -1,0 +1,79 @@
+<!-- top nav -->
+<!-- <header class="navbar top-nav navbar-expand-lg" id="top-nav">
+    <div class="container">
+        <a class="navbar-brand">
+            <i class="fa fa-phone"></i> +254 796 528157 <br> <br> <i class="fa fa-phone"></i> +254 790 504771</a>
+    </div>
+    <a class="navbar-brand">
+        <i class="fa fa-envelope-square"></i> info@thewealthsmith.co.ke <br> <br> <i class="fa fa-envelope-square"></i> sales@thewealthsmith.co.ke</a>
+    </div>
+    <div class="container">
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+                <a class="nav-link px-3" href="#"><i class="fa fa-facebook-f fa-1x"></i></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link px-3" href="#"><i class="fa fa-twitter-square fa-1x"></i></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link px-3" href="#"><i class="fa fa-youtube fa-1x"></i></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link px-3" href="#"><i class="fa fa-instagram fa-1x"></i></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link px-3" href="#"><i class="fa fa-linkedin fa-1x"></i></a>
+            </li>
+        </ul>
+    </div>
+</header> -->
+
+
+<!-- end of top nav -->
+
+<!-- second nav -->
+
+<nav class="navbar secondnavbar fixed-top navbar-expand-lg navbar-light">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="#"><img src="static/images/wealthsmith-logo.jpg" alt="logo" id ="logo"></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item active">
+                    <a class="nav-link px-3" href="{{url_for('home')}}"><i class="fa fa-home"></i> Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link px-3" href="{{url_for('about_us')}}"><i class="fa fa-address-card"></i> About Us</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link px-3" href="{{url_for('properties')}}"><i class="fa fa-building"></i> Properties</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link px-3" href="{{url_for('media')}}"><i class="fa fa-tv"></i> Media</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link px-3" href="{{url_for('contact_us')}}"><i class="fa fa-phone-square"></i> Contact Us</a>
+                </li>
+                {% if current_user.is_authenticated %}
+                    <li class="nav-item">
+                        <a class="nav-link px-3" href="{{url_for('account')}}"><i class="fa fa-user-circle"></i> My Profile</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link px-3" href="{{url_for('logout')}}"><i class="fa fa-sign-out"></i> Logout</a>
+                    </li>
+                {% else %}
+                    <li class="nav-item">
+                        <a class="nav-link px-3" href="{{url_for('register')}}"><i class="fa fa-pencil"></i> Register</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link px-3" href="{{url_for('login')}}"><i class="fa fa-sign-in"></i> Login</a>
+                    </li>
+                {% endif %}
+            </ul>
+        </div>
+    </div>
+</nav>
+ 
+<!-- end second navbar -->
